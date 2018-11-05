@@ -83,4 +83,3 @@ export function executeDL(modlistJSONObject:any, modFolder:string, forgeVersion:
   console.log("Remember to use forge " + forgeVersion);
 }
 
-executeDL(require("./modlist.hjson"), "1.2", "./mods")
