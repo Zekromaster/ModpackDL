@@ -48,6 +48,10 @@ class Mod {
 }
 
 export function executeDL(modlistJSONObject:any, modFolder:string, forgeVersion:string):void{
+  if (!fs.existsSync(modFolder)){
+    fs.mkdirSync(modFolder);
+  }
+
   var dirread:Array<string> = fs.readdirSync(modFolder);
   for (let modname in modlistJSONObject){
     modlist.push(new Mod(modname, modlistJSONObject[modname].version, modlistJSONObject[modname].url, modFolder));
@@ -82,4 +86,3 @@ export function executeDL(modlistJSONObject:any, modFolder:string, forgeVersion:
 
   console.log("Remember to use forge " + forgeVersion);
 }
-
