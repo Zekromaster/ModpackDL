@@ -12,7 +12,8 @@ var fs = require('fs');
 var downloadfile = require('download-to-file');
 var modlist:Array<Mod> = [];
 var finalModlist:Array<Mod> = [];
-var modDir = "./mods"
+var modDir = "./mods";
+var rmrf = require('rimraf').sync;
 
 class Mod {
   name:string;
@@ -71,7 +72,7 @@ export function executeDL(modlistJSONObject:any, modFolder:string, forgeVersion:
       if (dirread[file] == modlist[mod].getFilename()) isContained = true;
     }
     if (!isContained){
-      fs.unlinkSync(modDir + "/" + dirread[file]);
+      rmrf(modDir + "/" + dirread[file]);
       console.log(dirread[file] + " was removed and thus the file is now deleted.")
     }
   }
