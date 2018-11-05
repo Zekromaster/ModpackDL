@@ -47,7 +47,7 @@ class Mod {
   }
 }
 
-export function executeDL(modlistJSONObject, modFolder, forgeVersion){
+export function executeDL(modlistJSONObject:any, modFolder:string, forgeVersion:string):void{
   var dirread:Array<string> = fs.readdirSync(modFolder);
   for (let modname in modlistJSONObject){
     modlist.push(new Mod(modname, modlistJSONObject[modname].version, modlistJSONObject[modname].url, modFolder));
@@ -82,3 +82,5 @@ export function executeDL(modlistJSONObject, modFolder, forgeVersion){
 
   console.log("Remember to use forge " + forgeVersion);
 }
+
+executeDL(require("./modlist.hjson"), "1.2", "./mods")
