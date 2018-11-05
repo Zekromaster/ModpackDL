@@ -44,6 +44,9 @@ var Mod = /** @class */ (function () {
     return Mod;
 }());
 function executeDL(modlistJSONObject, modFolder, forgeVersion) {
+    if (!fs.existsSync(modFolder)) {
+        fs.mkdirSync(modFolder);
+    }
     var dirread = fs.readdirSync(modFolder);
     for (var modname in modlistJSONObject) {
         modlist.push(new Mod(modname, modlistJSONObject[modname].version, modlistJSONObject[modname].url, modFolder));
