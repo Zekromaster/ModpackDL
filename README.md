@@ -19,5 +19,7 @@ The Modlist JSON object should be a keyed json object with this structure:
 I suggest using an actual json file or hjson file, instead of writing an object by hand.
 
 ## Usage
-~~~~ var dl = require('modpackdl');
-dl.executeDL(modpackJsonObject, modsFolder, forgeVersion) ~~~~
+~~~~
+var dl = require('modpackdl');
+dl.executeDL(modpackJsonObject, modsFolder, forgeVersion)
+~~~~
