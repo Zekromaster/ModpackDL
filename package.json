@@ -18,12 +18,10 @@
   },
   "homepage": "https://github.com/zekromaster/ModpackDL#readme",
   "devDependencies": {
-    "@types/hjson": "^2.4.0",
     "@types/node": "^10.12.2",
     "typescript": "^3.1.6"
   },
   "dependencies": {
-    "download-to-file": "^2.1.0",
-    "hjson": "^3.1.1"
+    "download-to-file": "^2.1.0"
   }
 }

@@ -7,9 +7,6 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details. */
 
-// Config
-require("hjson/lib/require-config");
-
 // Various declarations
 var fs = require('fs');
 var downloadfile = require('download-to-file');
