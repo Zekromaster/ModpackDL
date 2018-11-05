@@ -1,0 +1,28 @@
+{
+  "name": "modpackdl",
+  "version": "0.0.1",
+  "description": "A minecraft \"launcher\" which allows generating a modpack from scratch",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zekromaster/ModpackDL.git"
+  },
+  "author": "Zekromaster",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/zekromaster/ModpackDL/issues"
+  },
+  "homepage": "https://github.com/zekromaster/ModpackDL#readme",
+  "devDependencies": {
+    "@types/hjson": "^2.4.0",
+    "@types/node": "^10.12.2",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "download-to-file": "^2.1.0",
+    "hjson": "^3.1.1"
+  }
+}
