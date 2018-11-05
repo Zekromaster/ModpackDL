@@ -8,12 +8,14 @@
 # GNU General Public License for more details. */
 
 // Various declarations
+require("hjson/lib/require-config");
 var fs = require('fs');
-var downloadfile = require('download-to-file');
 var modlist:Array<Mod> = [];
+var wait = require('wait.for-es6');
 var finalModlist:Array<Mod> = [];
 var modDir = "./mods";
 var rmrf = require('rimraf').sync;
+var request = require('request');
 
 class Mod {
   name:string;
@@ -38,12 +40,12 @@ class Mod {
       return;
     }
     console.log(this.getFilename() + " will be downloaded");
-    downloadfile(this.url, this.getPath(), function (err, filepath) {
-        if (err) throw err
-        console.log('Download finished:' + filepath)
-    });
+    var file = fs.createWriteStream(this.getPath());
+    wait.for(request(this.url).pipe(file));
+    console.log(this.getFilename() + " has been downloaded!");
   }
 }
+
 
 export function executeDL(modlistJSONObject:any, modFolder:string, forgeVersion:string):void{
   if (!fs.existsSync(modFolder)){
@@ -84,3 +86,6 @@ export function executeDL(modlistJSONObject:any, modFolder:string, forgeVersion:
 
   console.log("Remember to use forge " + forgeVersion);
 }
+
+executeDL(require('../modlist.hjson'), "./mods", "3");
+console.log("Prova");
