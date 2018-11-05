@@ -59,10 +59,3 @@ typings/
 
 # next.js build output
 .next
-
-# actual built output+
-dist/
-
-# Stuff
-*.hjson
-mods/
