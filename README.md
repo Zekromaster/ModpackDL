@@ -5,8 +5,8 @@ A simple minecraft modpack downloader.
 The Modlist JSON object should be a keyed json object with this structure:
 ~~~~
 {
-	forgeVersion: 16.45.23282
-	mods: {
+	forgeVersion: "16.45.23282"
+	mods: [
 		{
 			id: "ModName"
 			version: "1.7.10"
@@ -17,7 +17,7 @@ The Modlist JSON object should be a keyed json object with this structure:
 			version: "1.12.2"
 			url: "http://example.org"
 		}
-	}
+	]
 }
 ~~~~
 
