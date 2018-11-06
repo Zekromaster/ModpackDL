@@ -1,3 +1,3 @@
 import * as dl from "./index";
 
-dl.executeDL(require('../testmodlist.json'), "./mods", "EXAMPLE");
+dl.executeDL(require('../testmodlist.json'), "./mods");

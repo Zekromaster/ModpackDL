@@ -5,6 +5,7 @@ A simple minecraft modpack downloader.
 The Modlist JSON object should be a keyed json object with this structure:
 ~~~~
 {
+	forgeVersion: 16.45.23282
 	mods: {
 		{
 			id: "ModName"

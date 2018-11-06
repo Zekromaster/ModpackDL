@@ -46,7 +46,7 @@ class Mod {
 }
 
 
-export function executeDL(modlistJSONObject:any, modFolder:string, forgeVersion:string):void{
+export function executeDL(modlistJSONObject:any, modFolder:string):void{
   if (!fs.existsSync(modFolder)){
     fs.mkdirSync(modFolder);
   }
@@ -83,5 +83,5 @@ export function executeDL(modlistJSONObject:any, modFolder:string, forgeVersion:
     finalModlist[mod].download();
   }
 
-  console.log("Remember to use forge " + forgeVersion);
+  console.log("Remember to use forge " + modlistJSONObject.forgeVersion);
 }
