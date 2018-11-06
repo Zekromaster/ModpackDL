@@ -2,6 +2,11 @@
   "forgeVersion": "Example",
   "mods": [
     {
+      "name": "ChromatiCraft",
+      "version": "v21b",
+      "url": "https://media.forgecdn.net/files/2600/863/ChromatiCraft+1.7.10+V21b.jar"
+    },
+    {
       "name": "CodeChickenCore",
       "version": "1.0.7.47",
       "url": "https://media.forgecdn.net/files/2262/89/CodeChickenCore-1.7.10-1.0.7.47-universal.jar"

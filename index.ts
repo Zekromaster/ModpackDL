@@ -33,20 +33,22 @@ class Mod {
   getPath():string{
     return this.directory + "/" + this.getFilename();
   }
-  download():void{
+  async download(){
     if (this.url == "IGNORE") {
       console.log(this.getFilename() + " must be supplied by the user");
       return;
     }
     console.log(this.getFilename() + " will be downloaded");
     var file = fs.createWriteStream(this.getPath());
-    wait.for(request(this.url).pipe(file));
+    request(this.url).pipe(file);
+    await new Promise(fulfill => file.on("finish", fulfill));
     console.log(this.getFilename() + " has been downloaded!");
+    return 0;
   }
 }
 
 
-export function executeDL(modlistJSONObject:any, modFolder:string):void{
+export async function executeDL(modlistJSONObject:any, modFolder:string){
   if (!fs.existsSync(modFolder)){
     fs.mkdirSync(modFolder);
   }
@@ -80,7 +82,7 @@ export function executeDL(modlistJSONObject:any, modFolder:string):void{
 
   // Downloading missing mods
   for (let mod in finalModlist){
-    finalModlist[mod].download();
+    await finalModlist[mod].download();
   }
 
   console.log("Remember to use forge " + modlistJSONObject.forgeVersion);

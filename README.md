@@ -28,3 +28,16 @@ I suggest using an actual json file or hjson file, instead of writing an object 
 var dl = require('modpackdl');
 dl.executeDL(modpackJsonObject, modsFolder, forgeVersion)
 ~~~~
+
+or
+
+~~~~
+var dl = require('modpackdl');
+dl.executeDL(modpackJsonObject, modsFolder, forgeVersion).then( function(){
+	//Your stuff
+}.catch(function(){
+	//Error handling
+})
+~~~~
+
+executeDL() is async, not for lack of trying to download things in a synchronous manner.
