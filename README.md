@@ -8,12 +8,12 @@ The Modlist JSON object should be a keyed json object with this structure:
 	forgeVersion: "16.45.23282"
 	mods: [
 		{
-			id: "ModName"
+			name: "ModName"
 			version: "1.7.10"
 			url: "http://example.org"
 		},
 		{
-			id: "ModName"
+			name: "ModName"
 			version: "1.12.2"
 			url: "http://example.org"
 		}
