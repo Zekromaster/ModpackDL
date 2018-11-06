@@ -26,14 +26,14 @@ I suggest using an actual json file or hjson file, instead of writing an object 
 ## Usage
 ~~~~
 var dl = require('modpackdl');
-dl.executeDL(modpackJsonObject, modsFolder, forgeVersion)
+dl.executeDL(modpackJsonObject, modsFolder)
 ~~~~
 
 or
 
 ~~~~
 var dl = require('modpackdl');
-dl.executeDL(modpackJsonObject, modsFolder, forgeVersion).then( function(){
+dl.executeDL(modpackJsonObject, modsFolder).then( function(){
 	//Your stuff
 }.catch(function(){
 	//Error handling
