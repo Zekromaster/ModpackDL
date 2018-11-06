@@ -1,0 +1,14 @@
+{
+  "mods": [
+    {
+      "name": "CodeChickenCore",
+      "version": "1.0.7.47",
+      "url": "https://media.forgecdn.net/files/2262/89/CodeChickenCore-1.7.10-1.0.7.47-universal.jar"
+    },
+    {
+      "name": "Mantle",
+      "version": "0.3.2b",
+      "url": "https://media.forgecdn.net/files/2264/244/Mantle-1.7.10-0.3.2b.jar"
+    }
+  ]
+}

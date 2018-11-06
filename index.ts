@@ -8,7 +8,6 @@
 # GNU General Public License for more details. */
 
 // Various declarations
-require("hjson/lib/require-config");
 var fs = require('fs');
 var modlist:Array<Mod> = [];
 var wait = require('wait.for-es6');
@@ -53,8 +52,8 @@ export function executeDL(modlistJSONObject:any, modFolder:string, forgeVersion:
   }
 
   var dirread:Array<string> = fs.readdirSync(modFolder);
-  for (let modname in modlistJSONObject){
-    modlist.push(new Mod(modname, modlistJSONObject[modname].version, modlistJSONObject[modname].url, modFolder));
+  for (let mod in modlistJSONObject.mods){
+    modlist.push(new Mod(modlistJSONObject.mods[mod].name, modlistJSONObject.mods[mod].version, modlistJSONObject.mods[mod].url, modFolder));
   }
 
 
