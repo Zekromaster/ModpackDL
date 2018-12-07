@@ -10,7 +10,6 @@
 // Various declarations
 var fs = require('fs');
 var modlist:Array<Mod> = [];
-var wait = require('wait.for-es6');
 var finalModlist:Array<Mod> = [];
 var modDir = "./mods";
 var rmrf = require('rimraf').sync;

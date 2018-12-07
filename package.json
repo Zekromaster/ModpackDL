@@ -1,6 +1,6 @@
 {
   "name": "modpackdl",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A minecraft \"launcher\" which allows generating a modpack from scratch",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,12 +19,11 @@
   },
   "homepage": "https://github.com/zekromaster/ModpackDL#readme",
   "devDependencies": {
-    "@types/node": "^10.12.2",
+    "@types/node": "^10.12.12",
     "typescript": "^3.1.6"
   },
   "dependencies": {
     "request": "^2.88.0",
-    "rimraf": "^2.6.2",
-    "wait.for-es6": "^0.1.0"
+    "rimraf": "^2.6.2"
   }
 }

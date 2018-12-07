@@ -1,4 +1,4 @@
 lib/
 mods/
-simpletest.ts
-simpletest.js
+simpletest.*
+testmodlist.json
