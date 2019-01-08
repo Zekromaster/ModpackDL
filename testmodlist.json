@@ -16,6 +16,10 @@
       "name": "Mantle",
       "version": "0.3.2b",
       "url": "https://media.forgecdn.net/files/2264/244/Mantle-1.7.10-0.3.2b.jar"
+    },
+    {
+      "name": "My supercool secret mod",
+      "version": "0.0.1a"
     }
   ]
 }
