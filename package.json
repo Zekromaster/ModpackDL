@@ -20,9 +20,12 @@
   "homepage": "https://github.com/zekromaster/ModpackDL#readme",
   "devDependencies": {
     "@types/node": "^10.12.12",
+    "@types/request": "^2.48.1",
+    "@types/rimraf": "^2.0.2",
     "typescript": "^3.1.6"
   },
   "dependencies": {
+    "@types/es6-promisify": "^6.0.0",
     "request": "^2.88.0",
     "rimraf": "^2.6.2"
   }

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["es7"],
+    "target": "es5",
     "outDir": "./dist",
     "declaration": true
   }

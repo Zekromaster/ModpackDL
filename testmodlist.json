@@ -1,5 +1,6 @@
 {
   "forgeVersion": "Example",
+  "directory": "./mods",
   "mods": [
     {
       "name": "ChromatiCraft",
