@@ -22,6 +22,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as request from 'request';
 import * as rmrf from 'rimraf';
+import { promisify } from 'es6-promisify';
 
 function generateUrl(url: string | undefined | null): string{
   if (url === undefined || url === null) return "IGNORE";
@@ -119,7 +120,7 @@ export async function download(jsModlist:any){
   }
 
   // This writes the directory as a list of files
-  var sarrDirread:Array<string> = fs.readdirSync(sModFolder);
+  var sarrDirread:Array<string> = await promisify(fs.readdir)(sModFolder) as Array<string>;
 
   // This generates an array of "mod" objects
   for (let mod of jsModlist.mods){
