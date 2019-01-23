@@ -19,7 +19,6 @@
 
 // Various declarations
 import * as fs from 'fs';
-import * as path from 'path';
 import * as request from 'request';
 import * as rmrf from 'rimraf';
 import { promisify } from 'es6-promisify';
