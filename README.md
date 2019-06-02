@@ -1,4 +1,6 @@
 # ModpackDL
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FZekromaster%2FModpackDL.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FZekromaster%2FModpackDL?ref=badge_shield)
+
 A simple minecraft modpack downloader.
 
 ## Modlist JSON Object
@@ -43,3 +45,7 @@ dl.download(modpackJsonObject).then( function(){
 ~~~~
 
 executeDL() is async, not for lack of trying to download things in a synchronous manner.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FZekromaster%2FModpackDL.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FZekromaster%2FModpackDL?ref=badge_large)
